@@ -78,6 +78,17 @@ class _MainPageState extends State<MainPage> {
               ),
               SizedBox(height: 20),
               task != null ? buildUploadStatus(task!) : Container(),
+              SizedBox(height: 48),
+              ButtonWidget(
+                text: 'File Terupload',
+                icon: Icons.arrow_right_outlined,
+                onClicked: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ListA()),
+                  );
+                },
+              ),
             ],
           ),
         ),
@@ -208,7 +219,7 @@ class _ListAState extends State<ListA> {
       );
 
   Widget buildHeader(int length) => ListTile(
-        tileColor: Colors.blue,
+        tileColor: Colors.green,
         leading: Container(
           width: 52,
           height: 52,
